@@ -18,4 +18,13 @@
 
 .form {
   @apply flex flex-col items-center justify-center;
+  background-image: url("/22917.jpg");
+}
+
+.input:focus {
+  @apply outline-none border-blue-500 p-1;
+}
+
+.input{
+  @apply rounded p-1;
 }
