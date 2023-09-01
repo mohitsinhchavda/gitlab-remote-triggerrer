@@ -116,7 +116,7 @@ export default function Home() {
           latestPipelineStatus?.status
           ?
           <div className='mt-10'>
-            <h1 className='text-2xl mb-10'>Latest Pipeline Status (which was triggred by {latestPipelineStatus?.source === "trigger" ? "You" : "Someone else"})</h1>
+            <h1 className='text-2xl mb-10'>Latest Pipeline Status (which was triggred by {latestPipelineStatus?.source === "trigger" ? "You" : `${latestPipelineStatus?.user?.name ?? "Someone else"} (${latestPipelineStatus?.user?.username ?? ""})`})</h1>
             <div className='flex flex-col items-center bg form m-auto bg-blue-100 text-2xl mb-3'>
               {
                 latestPipelineStatus?.status === "success"
