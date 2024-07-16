@@ -25,7 +25,7 @@ LATEST_PIPELINE_API_URL=https://gitlab.com/api/v4/projects/{project_id}/pipeline
 
 and deploy the project to vercel. You will be able to do following things with the deployed app.
 
-1. You will be able to trigger pipeline for the desired pipeline
+1. You will be able to trigger pipeline for the desired pipeline, if you enter correct password in the input on the home page.
 2. You will be able to see latest pipeline status for the desired project and desired branch
 
 
