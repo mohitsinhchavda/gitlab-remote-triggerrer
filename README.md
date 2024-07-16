@@ -12,6 +12,11 @@ yarn dev
 pnpm dev
 ```
 
+## What is this project about?
+
+This project solves a problem of giving UI, to let a non-gitlab user, trigger a project pipeline without signing up to gitlab. So, if you are in a free plan of gitlab
+and want to let 6th user trigger a pipeline without giving them access to gitlab. You can setup and deploy this project to your infrastructure by following next section's steps.
+
 ## How to make use of it for my gitlab account
 
 Add below env variables
