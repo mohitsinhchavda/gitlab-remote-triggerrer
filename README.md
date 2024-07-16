@@ -12,27 +12,24 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## How to make use of it for my gitlab account
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Add below env variables
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```bash
+PASSWORD={ANY_PASSWORD_OR_PHRASE_OF_YOUR_CHOICE}
+WEBHOOK_URL=https://gitlab.com/api/v4/projects/{project_id}/trigger/pipeline?token={api_token_with_write_permission}&ref={DESIRED_BRANCH_TO_TRIGGER_PIPELINE_FOR}
+PRIVATE_TOKEN={GITLAB_TOKEN_WITH_READ_PERMISSIONS}
+LATEST_PIPELINE_API_URL=https://gitlab.com/api/v4/projects/{project_id}/pipelines/latest
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+and deploy the project to vercel. You will be able to do following things with the deployed app.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. You will be able to trigger pipeline for the desired pipeline
+2. You will be able to see latest pipeline status for the desired project and desired branch
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Want to extend the use of GitLab REST APIs?
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+We have only covered base cases as per our requirements, the GitLab REST APIs are much more rich in nature, and gives you flexibility of creating almost similar platform
+as of the gitlabs itself for all the operations. Don't believe me? [Visit the documentation of GitLab REST APIs here](https://docs.gitlab.com/ee/api/rest)
