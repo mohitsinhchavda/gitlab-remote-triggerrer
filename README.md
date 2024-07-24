@@ -17,7 +17,7 @@ pnpm dev
 This project solves a problem by letting a non-gitlab user, trigger a project pipeline without signing up to gitlab platform. So, if you are on a free plan of gitlab (which only allows 5 users to use the platform) and want to let 6th user trigger a pipeline without giving them access to gitlab. You can setup and deploy this project to your infrastructure or preferrably on vercel by following next section's steps.
 I have also written a blogpost on the same. You can visit all the blogposts written by me [here](https://mohitsinh.hashnode.dev).
 
-## How to make use of it for my gitlab account
+## How to make use of this project for your gitlab account?
 
 Add below env variables
 
